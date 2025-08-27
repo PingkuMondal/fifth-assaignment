@@ -65,7 +65,7 @@ getElement('cart-box').addEventListener('click',function(e){
         newCart.innerHTML=`
         <div class="grid grid-cols-3 justify-between items-center my-2 bg-gray-100/50 px-1 py-2 rounded-md">
                         <div class="col-span-2">
-                            <h1 class="inter-font font-semibold text-sm text-gray-900 ">${titleCall}</h1>
+                            <h1 class="hind font-bold text-md mt-4 text-gray-900 ">${titleCall}</h1>
                             <p class="hind font-normal text-sm ">${noCall}</p>
                         </div>
                         <div class="hind font-normal text-sm col-span-1">
