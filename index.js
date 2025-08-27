@@ -27,6 +27,16 @@ getElement('cart-box').addEventListener('click',function(e){
         const navCopyBtn=getElement('nav-copy-btn').innerText;
         const totalCopy=Number(navCopyBtn)+1;
         getElement('nav-copy-btn').innerText=totalCopy;
+
+       
+        navigator.clipboard.writeText(noCopy)
+        .then(function() {
+            return(noCopy);
+        })
+        .catch(function(wrong) {
+            return(wrong);
+        });
+
         }
 
         //nav call button
@@ -37,7 +47,7 @@ getElement('cart-box').addEventListener('click',function(e){
           const callAlert=titleCall+noCall;
 
 
-        alert(callAlert);
+        alert('📞'+callAlert);
           
           const navCallBtn=Number(getElement('nav-call-btn').innerText);
           if(navCallBtn>=20 ){
@@ -68,7 +78,7 @@ getElement('cart-box').addEventListener('click',function(e){
 
         }
         else{
-            alert('do not have balance');
+            alert('❌You do not have enough coins.You need at least 20 coins to make a call');
         }
     }
 
