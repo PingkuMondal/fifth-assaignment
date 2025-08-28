@@ -94,3 +94,34 @@ getElement('btn-clean').addEventListener('click',function(e){
 
 })
 
+     let scrolledToHistory=false;
+
+getElement('history-icon-btn').addEventListener('click',function(e){
+    e.preventDefault();
+
+    const asidePart=getElement('aside-btn');
+   
+    if(!scrolledToHistory){
+    asidePart.scrollIntoView({
+      behavior: 'smooth', 
+      block: 'start'})
+      scrolledToHistory=true;
+    }
+    else{
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+    scrolledToHistory=false;
+    }
+})
+
+getElement('logo-id').addEventListener('click',function(e){
+  e.preventDefault();
+  const banner=getElement('banner-id');
+   banner.scrollIntoView({
+      behavior: 'smooth', 
+      block: 'start'})
+})
+
+
