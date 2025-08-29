@@ -20,7 +20,7 @@ getElement('cart-box').addEventListener('click',function(e){
           const btnCopy=e.target;
           const titleCopy=btnCopy.parentNode.parentNode.children[1].innerText;
           const noCopy=btnCopy.parentNode.parentNode.children[3].innerText;
-          const copyAlert=titleCopy+noCopy;
+          const copyAlert='The number has been copied : '+noCopy;
 
 
         alert(copyAlert);
